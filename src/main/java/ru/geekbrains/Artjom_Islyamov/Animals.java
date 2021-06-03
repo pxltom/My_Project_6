@@ -1,32 +1,23 @@
 package ru.geekbrains.Artjom_Islyamov;
 
-import sun.dc.pr.PRError;
-
 public abstract class Animals {
-    private int run;
-    private int swim;
+    protected String name;
+    protected double maxDistanceToRun; //дистанция бега
+    protected double maxDistanceToSwim; //дистанция по воде
 
+    public Animals(String name, double maxDistanceToRun, double maxDistanceToSwim) {
+        this.name = name;
+        this.maxDistanceToRun = maxDistanceToRun;
+        this.maxDistanceToSwim = maxDistanceToSwim;
 
-    public Animals(int run, int swim) {
-        this.run = run;
-        this.swim = swim;
     }
 
-    public int getRun() {
-        return run;
-    }
+    abstract void running(double distance_run);
 
-    public void setRun(int run) {
-        this.run = run;
-    }
+    abstract void swimming(double distance_sw);
 
-    public int getSwim() {
-        return swim;
+    public void showInfo() {
+        System.out.printf("name = %s, max_length = %f, max_length_swim = %f%n", name, maxDistanceToRun, maxDistanceToSwim);
     }
-
-    public void setSwim(int swim) {
-        this.swim = swim;
-    }
-
 
 }
