@@ -20,7 +20,7 @@ public class Dog extends Animals {
     @Override
     void swimming(double distance_sw) {
 
-        if (distance_sw < maxDistanceToSwim) {
+        if (distance_sw > maxDistanceToSwim) {
             System.out.println(getName() + " не сможет столько проплыть. Дистанция " + distance_sw + " слишком длинная.");
         } else if (distance_sw < 0) {
             System.out.println("Ошибка!!!отрицательное число");
