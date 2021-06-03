@@ -7,9 +7,10 @@ public class Main {
         eak.running(200);
         eak.swimming(0);
         lucky.running(500);
-        lucky.swimming(-11);
+        lucky.swimming(10);
         eak.showInfo();
         lucky.showInfo();
+
 
         ////// Dog pesik = new Dog();
 

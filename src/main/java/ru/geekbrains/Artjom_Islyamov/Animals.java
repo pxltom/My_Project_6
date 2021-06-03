@@ -1,15 +1,38 @@
 package ru.geekbrains.Artjom_Islyamov;
 
 public abstract class Animals {
-    protected String name;
-    protected double maxDistanceToRun; //дистанция бега
-    protected double maxDistanceToSwim; //дистанция по воде
+    public String name;
+    private double maxDistanceToRun; //дистанция бега
+    private double maxDistanceToSwim; //дистанция по воде
 
     public Animals(String name, double maxDistanceToRun, double maxDistanceToSwim) {
         this.name = name;
         this.maxDistanceToRun = maxDistanceToRun;
         this.maxDistanceToSwim = maxDistanceToSwim;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getMaxDistanceToRun() {
+        return maxDistanceToRun;
+    }
+
+    public void setMaxDistanceToRun(double maxDistanceToRun) {
+        this.maxDistanceToRun = maxDistanceToRun;
+    }
+
+    public double getMaxDistanceToSwim() {
+        return maxDistanceToSwim;
+    }
+
+    public void setMaxDistanceToSwim(double maxDistanceToSwim) {
+        this.maxDistanceToSwim = maxDistanceToSwim;
     }
 
     abstract void running(double distance_run);
