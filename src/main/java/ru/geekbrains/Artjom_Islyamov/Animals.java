@@ -1,9 +1,10 @@
 package ru.geekbrains.Artjom_Islyamov;
 
 public abstract class Animals {
-    public String name;
+    private String name;
     private double maxDistanceToRun; //дистанция бега
     private double maxDistanceToSwim; //дистанция по воде
+
 
     public Animals(String name, double maxDistanceToRun, double maxDistanceToSwim) {
         this.name = name;
@@ -35,9 +36,12 @@ public abstract class Animals {
         this.maxDistanceToSwim = maxDistanceToSwim;
     }
 
+
+
     abstract void running(double distance_run);
 
     abstract void swimming(double distance_sw);
+
 
     public void showInfo() {
         System.out.printf("name = %s, max_length = %f, max_length_swim = %f%n", name, maxDistanceToRun, maxDistanceToSwim);
